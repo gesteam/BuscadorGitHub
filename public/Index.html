@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html ng-app="miApp">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Buscador GitHub</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/AppController.js"></script>
+    <script src="scripts/services/GitHubService.js"></script>
+ 
+   <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/Main.css" rel="stylesheet">
+    
+   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    
+
+</head>
+<body>
+    
+   <div class="container-full">
+
+      <div class="row">
+       
+        <div class="col-md-12 text-center v-center">
+          
+          <h1>Busca en GitHub</h1>
+          <p class="lead">Tus búsquedas a un click</p>
+          
+          <br><br><br>
+          
+          <form class="col-md-12">
+            <div class="input-group" >
+            <input class="form-control input-lg input-corner" title="" placeholder="Nombre a buscar" type="text" ng-model="query"/>
+            <input class="form-control" title="" placeholder="Número Resultados" ng-model="perpage" type="number" name="num" min="1" max="250">
+            
+          <div>
+              <a href='#/{{query}}/{{perpage}}'> 
+              <button class="btn form-control btn-warning" type="button">OK</button></a></div>
+              
+            </div>
+          </form>
+        </div>
+        {{resultado}}
+      </div> 
+  
+      <div class="row">
+       
+        <div class="col-lg-12 text-center v-center" style="font-size:39pt;">
+          <a href="#"><i class="icon-google-plus"></i></a> <a href="#"><i class="icon-facebook"></i></a>  <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-github"></i></a> <a href="#"><i class="icon-pinterest"></i></a>
+        </div>
+      
+      </div>
+  
+    
+
+</div> 
+    <div id="contenedorParcial" class="container-full" ng-view autoscroll="true">
+
+    </div>
+
+<div id="bottom">
+</div>
+
+
+
+</body>
+</html>

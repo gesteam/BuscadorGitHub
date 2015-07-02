@@ -1,0 +1,71 @@
+<div id="resultados" class="container container-full"/>
+
+
+
+<div class="row margen">
+    <span class="label label-xl label-warning" type="button">
+  Resultados de la busqueda <span class="badge">{{data.total_count}}</span>
+</span>
+
+</div>
+<div class="row margen">
+
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-default" ng-click="paginaAnterior()">&laquo;</button>
+  <button type="button" class="btn btn-default prevent">Mostrando Página {{pagina}} de  {{paginasTotal}}</button>
+  <button type="button" class="btn btn-default" ng-click="paginaSiguiente()">&raquo;</button>
+</div>
+
+</div>
+<div class="row">
+
+    <div class="col-xs-12 padding-left-0">
+
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+
+                     <th class="col-xs-1"></th>
+                     <th class="col-xs-2 hidden-xs">Usuario</th>
+                    <th class="col-xs-2">Nombre</th>
+                    <th class="col-xs-5 hidden-xs" >Descripción</th>
+                    <th class="col-xs-1">Link</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="res in data.items">
+          
+                     <td>
+                         <img ng-src="{{res.owner.avatar_url}}" alt="avatar" height="40px">
+                    </td>
+                     <td  class="hidden-xs">
+                         {{res.owner.login}}
+                    </td>
+                      <td>
+                    	{{res.full_name}}</a>
+                    </td> 
+                         <td class="hidden-xs">
+                        {{res.description}}</a>
+                    </td>
+                 
+              
+                    <td>
+                        <a href="{{res.html_url}}" target="_blank"><span class="glyphicon glyphicon-search"></span></a>
+                    </td>
+                   </tr>
+
+         	
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+

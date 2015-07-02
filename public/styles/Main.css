@@ -88,3 +88,20 @@ padding:4%;
  width: 95%;
 }
 
+@media only screen and (max-width:768px) {
+
+ #formbusca{
+  margin-top: 80px;
+  width: 95%;
+ }
+
+ input, button {
+  width: 95% !important;
+ }
+
+ #fotoGit{
+width:80%;
+padding:4%;
+}
+
+}
